@@ -1,0 +1,288 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design System - CSS Variables for Theme Management */
+
+:root {
+  color-scheme: light;
+}
+
+:root[data-mode="dark"] {
+  color-scheme: dark;
+}
+
+/* Light Mode Palettes */
+:root[data-mode="light"][data-palette="monochrome"] {
+  --color-background: 255 255 255;
+  --color-foreground: 0 0 0;
+  --color-card: 250 250 250;
+  --color-card-foreground: 0 0 0;
+  --color-primary: 0 0 0;
+  --color-primary-foreground: 255 255 255;
+  --color-secondary: 245 245 245;
+  --color-secondary-foreground: 0 0 0;
+  --color-muted: 245 245 245;
+  --color-muted-foreground: 115 115 115;
+  --color-accent: 245 245 245;
+  --color-accent-foreground: 0 0 0;
+  --color-border: 229 229 229;
+  --color-input: 229 229 229;
+  --color-ring: 0 0 0;
+}
+
+:root[data-mode="light"][data-palette="ocean"] {
+  --color-background: 255 255 255;
+  --color-foreground: 15 23 42;
+  --color-card: 248 250 252;
+  --color-card-foreground: 15 23 42;
+  --color-primary: 59 130 246;
+  --color-primary-foreground: 255 255 255;
+  --color-secondary: 241 245 249;
+  --color-secondary-foreground: 15 23 42;
+  --color-muted: 241 245 249;
+  --color-muted-foreground: 100 116 139;
+  --color-accent: 219 234 254;
+  --color-accent-foreground: 30 64 175;
+  --color-border: 226 232 240;
+  --color-input: 226 232 240;
+  --color-ring: 59 130 246;
+}
+
+:root[data-mode="light"][data-palette="emerald"] {
+  --color-background: 255 255 255;
+  --color-foreground: 6 78 59;
+  --color-card: 247 254 251;
+  --color-card-foreground: 6 78 59;
+  --color-primary: 16 185 129;
+  --color-primary-foreground: 255 255 255;
+  --color-secondary: 236 253 245;
+  --color-secondary-foreground: 6 78 59;
+  --color-muted: 236 253 245;
+  --color-muted-foreground: 107 114 128;
+  --color-accent: 209 250 229;
+  --color-accent-foreground: 6 95 70;
+  --color-border: 209 250 229;
+  --color-input: 209 250 229;
+  --color-ring: 16 185 129;
+}
+
+:root[data-mode="light"][data-palette="lavender"] {
+  --color-background: 255 255 255;
+  --color-foreground: 76 29 149;
+  --color-card: 250 245 255;
+  --color-card-foreground: 76 29 149;
+  --color-primary: 139 92 246;
+  --color-primary-foreground: 255 255 255;
+  --color-secondary: 245 243 255;
+  --color-secondary-foreground: 76 29 149;
+  --color-muted: 245 243 255;
+  --color-muted-foreground: 107 114 128;
+  --color-accent: 233 213 255;
+  --color-accent-foreground: 91 33 182;
+  --color-border: 233 213 255;
+  --color-input: 233 213 255;
+  --color-ring: 139 92 246;
+}
+
+:root[data-mode="light"][data-palette="rose"] {
+  --color-background: 255 255 255;
+  --color-foreground: 136 19 55;
+  --color-card: 255 247 250;
+  --color-card-foreground: 136 19 55;
+  --color-primary: 244 63 94;
+  --color-primary-foreground: 255 255 255;
+  --color-secondary: 255 241 242;
+  --color-secondary-foreground: 136 19 55;
+  --color-muted: 255 241 242;
+  --color-muted-foreground: 107 114 128;
+  --color-accent: 254 205 211;
+  --color-accent-foreground: 159 18 57;
+  --color-border: 254 205 211;
+  --color-input: 254 205 211;
+  --color-ring: 244 63 94;
+}
+
+:root[data-mode="light"][data-palette="amber"] {
+  --color-background: 255 255 255;
+  --color-foreground: 120 53 15;
+  --color-card: 255 251 235;
+  --color-card-foreground: 120 53 15;
+  --color-primary: 245 158 11;
+  --color-primary-foreground: 255 255 255;
+  --color-secondary: 254 243 199;
+  --color-secondary-foreground: 120 53 15;
+  --color-muted: 254 243 199;
+  --color-muted-foreground: 107 114 128;
+  --color-accent: 253 230 138;
+  --color-accent-foreground: 146 64 14;
+  --color-border: 253 230 138;
+  --color-input: 253 230 138;
+  --color-ring: 245 158 11;
+}
+
+/* Dark Mode Palettes */
+:root[data-mode="dark"][data-palette="monochrome"] {
+  --color-background: 10 10 10;
+  --color-foreground: 255 255 255;
+  --color-card: 23 23 23;
+  --color-card-foreground: 255 255 255;
+  --color-primary: 255 255 255;
+  --color-primary-foreground: 0 0 0;
+  --color-secondary: 38 38 38;
+  --color-secondary-foreground: 255 255 255;
+  --color-muted: 38 38 38;
+  --color-muted-foreground: 163 163 163;
+  --color-accent: 38 38 38;
+  --color-accent-foreground: 255 255 255;
+  --color-border: 38 38 38;
+  --color-input: 38 38 38;
+  --color-ring: 255 255 255;
+}
+
+:root[data-mode="dark"][data-palette="ocean"] {
+  --color-background: 15 23 42;
+  --color-foreground: 248 250 252;
+  --color-card: 30 41 59;
+  --color-card-foreground: 248 250 252;
+  --color-primary: 59 130 246;
+  --color-primary-foreground: 255 255 255;
+  --color-secondary: 51 65 85;
+  --color-secondary-foreground: 248 250 252;
+  --color-muted: 51 65 85;
+  --color-muted-foreground: 148 163 184;
+  --color-accent: 30 58 138;
+  --color-accent-foreground: 191 219 254;
+  --color-border: 51 65 85;
+  --color-input: 51 65 85;
+  --color-ring: 59 130 246;
+}
+
+:root[data-mode="dark"][data-palette="emerald"] {
+  --color-background: 6 78 59;
+  --color-foreground: 236 253 245;
+  --color-card: 17 94 89;
+  --color-card-foreground: 236 253 245;
+  --color-primary: 52 211 153;
+  --color-primary-foreground: 6 78 59;
+  --color-secondary: 19 78 74;
+  --color-secondary-foreground: 236 253 245;
+  --color-muted: 19 78 74;
+  --color-muted-foreground: 167 243 208;
+  --color-accent: 6 95 70;
+  --color-accent-foreground: 209 250 229;
+  --color-border: 19 78 74;
+  --color-input: 19 78 74;
+  --color-ring: 52 211 153;
+}
+
+:root[data-mode="dark"][data-palette="lavender"] {
+  --color-background: 46 16 101;
+  --color-foreground: 245 243 255;
+  --color-card: 76 29 149;
+  --color-card-foreground: 245 243 255;
+  --color-primary: 167 139 250;
+  --color-primary-foreground: 46 16 101;
+  --color-secondary: 88 28 135;
+  --color-secondary-foreground: 245 243 255;
+  --color-muted: 88 28 135;
+  --color-muted-foreground: 216 180 254;
+  --color-accent: 91 33 182;
+  --color-accent-foreground: 233 213 255;
+  --color-border: 88 28 135;
+  --color-input: 88 28 135;
+  --color-ring: 167 139 250;
+}
+
+:root[data-mode="dark"][data-palette="rose"] {
+  --color-background: 76 5 25;
+  --color-foreground: 255 241 242;
+  --color-card: 136 19 55;
+  --color-card-foreground: 255 241 242;
+  --color-primary: 251 113 133;
+  --color-primary-foreground: 76 5 25;
+  --color-secondary: 159 18 57;
+  --color-secondary-foreground: 255 241 242;
+  --color-muted: 159 18 57;
+  --color-muted-foreground: 253 164 175;
+  --color-accent: 159 18 57;
+  --color-accent-foreground: 254 205 211;
+  --color-border: 159 18 57;
+  --color-input: 159 18 57;
+  --color-ring: 251 113 133;
+}
+
+:root[data-mode="dark"][data-palette="amber"] {
+  --color-background: 69 26 3;
+  --color-foreground: 254 243 199;
+  --color-card: 120 53 15;
+  --color-card-foreground: 254 243 199;
+  --color-primary: 251 191 36;
+  --color-primary-foreground: 69 26 3;
+  --color-secondary: 146 64 14;
+  --color-secondary-foreground: 254 243 199;
+  --color-muted: 146 64 14;
+  --color-muted-foreground: 253 230 138;
+  --color-accent: 146 64 14;
+  --color-accent-foreground: 253 230 138;
+  --color-border: 146 64 14;
+  --color-input: 146 64 14;
+  --color-ring: 251 191 36;
+}
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: rgb(var(--color-background));
+  color: rgb(var(--color-foreground));
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Utility Classes */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(var(--color-secondary));
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--color-muted-foreground));
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--color-foreground) / 0.7);
+}
